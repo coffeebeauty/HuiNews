@@ -5,8 +5,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
+import android.widget.Toast;
 
 /**
  * Created by h_kang on 2017/3/13.
@@ -31,6 +34,41 @@ public class NewsContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.news_content, container, false);
         Log.d(TAG, "onCreateView: " + getClass().getSimpleName());
+//        final ScrollView scrollView = (ScrollView)view.findViewById(R.id.content_scroll);
+//        scrollView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                switch (event.getAction()) {
+//                    //手指抬起
+//                    case MotionEvent.ACTION_UP:
+//                        break;
+//                    //手指落下
+//                    case MotionEvent.ACTION_DOWN:
+//                        break;
+//                    //手指滑动
+//                    case MotionEvent.ACTION_MOVE:
+//                        /**
+//                         * 1、getScorollY()——滚动条滑动的距离
+//                         * 2、getMeasuredHeight()——内容的整体高度，包括隐藏部分
+//                         * 3、getHeight()——显示高度。内容未布满屏幕，2=3；内容大于屏幕，3=屏幕高度，2>3。
+//                         */
+//                        //顶部状态
+//                        if (scrollView.getScrollY() <= 0) {
+//                            Log.e(">>>>>>>>>>>>>>", "顶部");
+//                            Toast.makeText(getActivity(), "顶部", Toast.LENGTH_SHORT).show();
+//                        }
+//
+//                        //顶部状态
+//                        //TextView的总高度<=一屏幕的高度+滚动条的滚动距离(getChildAt(0):第0个子控件)
+//                        if (scrollView.getChildAt(0).getMeasuredHeight() <= scrollView.getScrollY() + scrollView.getHeight()) {
+//                            Log.e(">>>>>>>>>>>>>>", "底部");
+//                            Toast.makeText(getActivity(), "底部", Toast.LENGTH_SHORT).show();
+//                        }
+//                        break;
+//                }
+//                return false;
+//            }
+//        });
         return view;
     }
 

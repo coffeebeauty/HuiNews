@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">HuiNews</string>
+    <string name="app_name">慧慧的软件库</string>
+    <string name="main_btn_news">看新闻</string>
 </resources>
